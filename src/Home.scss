@@ -1,0 +1,31 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 3px;
+
+  &-header {
+    font-size: calc(15px);
+    color: white;
+    text-align: center;
+  }
+
+  &-data {
+    display: flex;
+    flex-direction: row;
+    flex: 0.8;
+
+    &-load, &-map {
+      display: flex;
+      padding: 10px;
+    }
+
+    &-load {
+      flex: 0.2;
+    }
+
+    &-map {
+      flex: 0.8;
+    }
+  }
+}
