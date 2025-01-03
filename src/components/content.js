@@ -44,6 +44,7 @@ export const Content = ({
           return {
             id,
             maxWeight: parseInt(maxWeight),
+            location: { lat: parseFloat(lat), long: parseFloat(long) },
             lat: parseFloat(lat),
             long: parseFloat(long),
             requestsActive: parseInt(requestsActive),
@@ -62,11 +63,11 @@ export const Content = ({
       <form className="content-form" onSubmit={handleProcessFiles}>
         <div className="content-form-wrapper">
           <label htmlFor="entregasFile">Archivo de entregas: </label>
-          <input ref={entregasRef} type="file" id="entregasFile"/>
+          <input ref={entregasRef} type="file" id="entregasFile" required title="Need this"/>
         </div>
         <div className="content-form-wrapper">
           <label htmlFor="domicilariosFile">Archivo de domicilarios: </label>
-          <input ref={domicilariosRef} type="file" id="domicilariosFile"/>
+          <input ref={domicilariosRef} type="file" id="domicilariosFile" required title="Need this"/>
         </div>
         <button type="submit" className="btn-submit">Search</button>
       </form>
