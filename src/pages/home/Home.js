@@ -3,12 +3,12 @@ import axios from 'axios';
 
 import './Home.scss';
 
-import { Content } from './components/content';
-import { Header } from './components/header';
-import OrdersMap from './components/orders-map';
+import { Content } from '../../components/content';
+import { Header } from '../../components/header';
+import OrdersMap from '../../components/orders-map';
 import { Wrapper } from '@googlemaps/react-wrapper';
-import { getRandomHexColor } from './helpers/colors';
-import DeliveriesTable from './components/deliveries-table';
+import { getRandomHexColor } from '../../helpers/colors';
+import DeliveriesTable from '../../components/deliveries-table';
 
 function Home() {
   const [entregasData, setEntregasData] = useState([]);
@@ -19,6 +19,9 @@ function Home() {
   const handleProcessFiles = (event) => {
     let vehicles = domicilariosData;
     let orders = entregasData;
+
+    console.log('vehicles', vehicles);
+    console.log('orders', orders);
 
     let index = 0;
     const interval = setInterval(async () => {

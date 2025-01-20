@@ -9,9 +9,10 @@ const OrdersMap = forwardRef((_, ref) => {
   const r = 15;
 
   const paths = {
-    start: `M 0 0 L${r} ${(r/2)} L0 ${r} L0 0`,
-    finish: `M 0 ${(r/2)} L${r} 0 L${r} ${r} L0 ${(r/2)}`,
-    bike: `M 0 0 L${r} 0 L${(r-(r/4))} ${(r/2)} L${r} ${r} L0 ${r} L${(r/4)} ${(r/2)} L0 0`,
+    start: `M${(r/2)} 0 L${r} ${(r/2)} L${r} ${r} L0 ${r} L0 ${(r/2)} L${(r/2)} 0`,
+    finish: `M0 ${r} L0 0 L${r} 0 L${r} ${(r/2)} L0 ${(r/2)}`,
+    bike: ``
+    //bike: `M 0 0 L${r} 0 L${(r-(r/4))} ${(r/2)} L${r} ${r} L0 ${r} L${(r/4)} ${(r/2)} L0 0`,
   }
   
   const svgMarker = {
