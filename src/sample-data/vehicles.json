@@ -1,0 +1,98 @@
+[
+  {
+    "idNew": "7648c32a-c33a-45cf-89ee-d64577b918b7",
+    "id": "T1327",
+    "maxWeight": 3,
+    "location": {
+      "lat": 11.029419288931408,
+      "long": -74.82907496606241
+    },
+    "requestsActive": 5,
+    "requestsTotal": 35,
+    "status": "disponible"
+  },
+  {
+    "idNew": "e0dfc5b6-032a-4c24-aaf3-a0370386bbc0",
+    "id": "T1373",
+    "maxWeight": 2,
+    "location": {
+      "lat": 11.028070606240698,
+      "long": -74.8159167138275
+    },
+    "requestsActive": 2,
+    "requestsTotal": 15,
+    "status": "disponible"
+  },
+  {
+    "idNew": "1d49e05a-d1f0-4a31-b811-4b8ae0bc540e",
+    "id": "T1329",
+    "maxWeight": 3,
+    "location": {
+      "lat": 11.00347537472159,
+      "long": -74.78669413477782
+    },
+    "requestsActive": 2,
+    "requestsTotal": 15,
+    "status": "disponible"
+  },
+  {
+    "idNew": "c672bfff-47aa-40f4-8293-a0b7660f6841",
+    "id": "T1134",
+    "maxWeight": 2,
+    "location": {
+      "lat": 10.976303136365058,
+      "long": -74.81405525761468
+    },
+    "requestsActive": 5,
+    "requestsTotal": 35,
+    "status": "disponible"
+  },
+  {
+    "idNew": "48cef980-0eca-4e74-806d-af8d22e9523d",
+    "id": "T1392",
+    "maxWeight": 2,
+    "location": {
+      "lat": 10.963892056021036,
+      "long": -74.82793703272205
+    },
+    "requestsActive": 5,
+    "requestsTotal": 15,
+    "status": "disponible"
+  },
+  {
+    "idNew": "d507e2ba-d2e1-423a-8cc0-59840bf61665",
+    "id": "T1011",
+    "maxWeight": 2,
+    "location": {
+      "lat": 10.994966255572201,
+      "long": -74.79249488516987
+    },
+    "requestsActive": 5,
+    "requestsTotal": 35,
+    "status": "disponible"
+  },
+  {
+    "idNew": "0580ff00-e140-4648-96c0-740cc489df8d",
+    "id": "T1331",
+    "maxWeight": 2,
+    "location": {
+      "lat": 10.992828868547935,
+      "long": -74.80354636915993
+    },
+    "requestsActive": 5,
+    "requestsTotal": 15,
+    "status": "disponible"
+  },
+  {
+    "idNew": "79faf269-12bc-4733-b654-f69d44f0900d",
+    "id": "T1140",
+    "maxWeight": 2,
+    "location": {
+      "lat": 10.960277600939122,
+      "long": -74.78760526711815
+    },
+    "requestsActive": 2,
+    "requestsTotal": 35,
+    "status": "disponible"
+  }
+]
