@@ -3,7 +3,7 @@ import { Button, Table } from "react-bootstrap";
 import { useVehicles } from "../../context/DataContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExclamation, faPersonRunning } from "@fortawesome/free-solid-svg-icons";
+import { faExclamation, faLocationDot, faPersonRunning } from "@fortawesome/free-solid-svg-icons";
 import { Wrapper } from "@googlemaps/react-wrapper";
 import VehicleMap from "../../components/VehicleMap";
 
@@ -31,7 +31,7 @@ const Vehicles = () => {
             </thead>
             <tbody>
               {vehicles.map((vehicle) => (
-                <tr key={vehicle.id} onClick={() => setSelectedVehicle(vehicle)}>
+                <tr key={vehicle.id}>
                   <td>{vehicle.id}</td>
                   <td>{vehicle.maxWeight}</td>
                   <td>{vehicle.location.lat}</td>
@@ -49,13 +49,15 @@ const Vehicles = () => {
                       <Button variant="primary" size="sm" className="table-wrapper__table__actions-action">
                         <FontAwesomeIcon icon={faExclamation} />
                       </Button>
-                    )}           
+                    )}
+                    <Button variant="success" size="sm" className="table-wrapper__table__actions-action" onClick={() => setSelectedVehicle(vehicle)}>
+                      <FontAwesomeIcon icon={faLocationDot} />
+                    </Button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </Table>
-          <Button variant="primary">Primary</Button>
         </div>
         {selectedVehicle && (
           <div className="vehicles-info">

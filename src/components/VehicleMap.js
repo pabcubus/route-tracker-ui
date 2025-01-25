@@ -4,15 +4,20 @@ const VehicleMap = ({ vehicle }) => {
   const internalRef = useRef(null);
   const [map, setMap] = useState(null);
 
-  const drawPoint = ({lat, lng}) => {
+  const drawPoint = ({lat, lng, customMap}) => {
     new window.google.maps.Marker({
       position: {lat, lng},
-      map: map,
+      map: customMap,
     })
   };
 
   useEffect(() => {
     let innerMap;
+    const point = {
+      lat: vehicle.location.lat,
+      lng: vehicle.location.long
+    };
+
     if (!map) {
       innerMap = new window.google.maps.Map(internalRef?.current, {
         center: { lat: -25.363, lng: 131.044 },
@@ -24,12 +29,10 @@ const VehicleMap = ({ vehicle }) => {
     }
 
     if (vehicle) {
-      const point = {
-        lat: vehicle.location.lat,
-        lng: vehicle.location.long
-      };
-
-      drawPoint(point);
+      drawPoint({
+        ...point,
+        customMap: map ? map : innerMap
+      });
 
       if (map) {
         map.setCenter(point);
