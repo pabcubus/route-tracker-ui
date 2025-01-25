@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from './layouts/Layout';
 import Vehicles from './pages/Vehicles/Vehicles';
 import Deliveries from './pages/Deliveries/Deliveries';
-import './index.css';
+import './styles/_index.scss';
 
 import {
   createBrowserRouter,

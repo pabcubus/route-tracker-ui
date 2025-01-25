@@ -1,6 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
 
-import "./Layout.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBoxOpen, faGear, faPersonBiking } from "@fortawesome/free-solid-svg-icons";
 

@@ -5,8 +5,8 @@
 
   &__nav {
     width: 60px;
-    background-color: #1F305E;
-    border-right: 2px solid #002244;
+    background-color: #fff;
+    border-right: 2px solid #DFE1E5;
     display: flex;
     flex-direction: column;
 
@@ -25,7 +25,7 @@
       justify-content: center;
 
       &:hover {
-        background-color: #002244;
+        background-color: #DFE5EE;
       }
     }
   }
@@ -33,6 +33,15 @@
   &__main {
     flex-grow: 1;
     box-sizing: border-box;
-    margin: 20px;
+    background-color: #F2F3F7;
+  }
+}
+
+.content {
+  &__panel {
+    margin: $panel-gap;
+    padding: $panel-gap;
+    border-radius: 5px;
+    background-color: #fff;
   }
 }
