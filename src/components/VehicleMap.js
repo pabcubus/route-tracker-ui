@@ -1,14 +1,21 @@
-import { useEffect, useImperativeHandle, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const VehicleMap = ({ vehicle }) => {
   const internalRef = useRef(null);
   const [map, setMap] = useState(null);
+  const [markers, setMarkers] = useState([]);
 
   const drawPoint = ({lat, lng, customMap}) => {
-    new window.google.maps.Marker({
+    markers.forEach((marker) => {
+      marker.setMap(null);
+    });
+
+    const marker = new window.google.maps.Marker({
       position: {lat, lng},
       map: customMap,
-    })
+    });
+
+    setMarkers((prev) => [marker]);
   };
 
   useEffect(() => {
@@ -41,20 +48,6 @@ const VehicleMap = ({ vehicle }) => {
       }
     }
   }, [vehicle]);
-
-  /*
-  useEffect(() => {
-    if (!map) {
-      const innerMap = new window.google.maps.Map(internalRef?.current, {
-        center: { lat: -25.363, lng: 131.044 },
-        zoom: 15,
-        mapTypeId: "roadmap",
-      });
-  
-      setMap(() => innerMap);      
-    }
-  }, []);
-  */
 
   return (
     <div ref={internalRef} id="map" className='map' />

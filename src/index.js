@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from './layouts/Layout';
-import Vehicles from './pages/Vehicles/Vehicles';
-import Deliveries from './pages/Deliveries/Deliveries';
+import Vehicles from './pages/vehicles/Vehicles';
+import Deliveries from './pages/deliveries/Deliveries';
 import './styles/_index.scss';
 
 import {
@@ -12,10 +12,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { DataProvider } from './context/DataContext';
+import Home from './pages/home/Home';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/", 
+    element: <Layout />,
+    children: [{
+      index: true,
+      element: <Home />
+    }]
+  }, {
     element: <Layout />,
     children: [{
       path: "/vehicles",
@@ -29,9 +36,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <DataProvider>
-      <RouterProvider router={router} />
-    </DataProvider>
-  </React.StrictMode>
+  <DataProvider>
+    <RouterProvider router={router} />
+  </DataProvider>
 );
+
+// On prod remember to call <React.StrictMode>

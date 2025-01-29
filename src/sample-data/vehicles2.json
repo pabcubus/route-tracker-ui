@@ -4,11 +4,11 @@
     "id": "T1327",
     "maxWeight": 3,
     "location": {
-      "lat": 10.992578977950968,
-      "long": -74.80660721168753
+      "lat": 11.029419288931408,
+      "long": -74.82907496606241
     },
-    "requestsActive": 0,
-    "requestsTotal": 0,
+    "requestsActive": 5,
+    "requestsTotal": 35,
     "status": "disponible"
   },
   {
@@ -16,11 +16,11 @@
     "id": "T1373",
     "maxWeight": 2,
     "location": {
-      "lat": 10.992578977950968,
-      "long": -74.80660721168753
+      "lat": 11.028070606240698,
+      "long": -74.8159167138275
     },
-    "requestsActive": 0,
-    "requestsTotal": 0,
+    "requestsActive": 2,
+    "requestsTotal": 15,
     "status": "disponible"
   },
   {
@@ -28,23 +28,23 @@
     "id": "T1329",
     "maxWeight": 3,
     "location": {
-      "lat": 10.992578977950968,
-      "long": -74.80660721168753
+      "lat": 11.00347537472159,
+      "long": -74.78669413477782
     },
-    "requestsActive": 0,
-    "requestsTotal": 0,
+    "requestsActive": 2,
+    "requestsTotal": 15,
     "status": "disponible"
   },
   {
     "idNew": "c672bfff-47aa-40f4-8293-a0b7660f6841",
-    "id": "T1196",
+    "id": "T1134",
     "maxWeight": 2,
     "location": {
-      "lat": 10.992578977950968,
-      "long": -74.80660721168753
+      "lat": 10.976303136365058,
+      "long": -74.81405525761468
     },
-    "requestsActive": 2,
-    "requestsTotal": 2,
+    "requestsActive": 5,
+    "requestsTotal": 35,
     "status": "disponible"
   },
   {
@@ -52,23 +52,23 @@
     "id": "T1392",
     "maxWeight": 2,
     "location": {
-      "lat": 10.992578977950968,
-      "long": -74.80660721168753
+      "lat": 10.963892056021036,
+      "long": -74.82793703272205
     },
-    "requestsActive": 0,
-    "requestsTotal": 0,
+    "requestsActive": 5,
+    "requestsTotal": 15,
     "status": "disponible"
   },
   {
     "idNew": "d507e2ba-d2e1-423a-8cc0-59840bf61665",
-    "id": "T1081",
+    "id": "T1011",
     "maxWeight": 2,
     "location": {
-      "lat": 10.992578977950968,
-      "long": -74.80660721168753
+      "lat": 10.994966255572201,
+      "long": -74.79249488516987
     },
-    "requestsActive": 1,
-    "requestsTotal": 1,
+    "requestsActive": 5,
+    "requestsTotal": 35,
     "status": "disponible"
   },
   {
@@ -76,11 +76,11 @@
     "id": "T1331",
     "maxWeight": 2,
     "location": {
-      "lat": 10.992578977950968,
-      "long": -74.80660721168753
+      "lat": 10.992828868547935,
+      "long": -74.80354636915993
     },
-    "requestsActive": 0,
-    "requestsTotal": 0,
+    "requestsActive": 5,
+    "requestsTotal": 15,
     "status": "disponible"
   },
   {
@@ -88,11 +88,11 @@
     "id": "T1140",
     "maxWeight": 2,
     "location": {
-      "lat": 10.992578977950968,
-      "long": -74.80660721168753
+      "lat": 10.960277600939122,
+      "long": -74.78760526711815
     },
-    "requestsActive": 0,
-    "requestsTotal": 0,
+    "requestsActive": 2,
+    "requestsTotal": 35,
     "status": "disponible"
   }
 ]

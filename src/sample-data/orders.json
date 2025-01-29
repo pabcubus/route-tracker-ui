@@ -1,0 +1,44 @@
+[
+  {
+    "vehicleId": "T1196",
+    "status": "pendiente",
+    "order": 1,
+    "weight": 2,
+    "startCoords": {
+      "lat": 10.97794269693914,
+      "long": -74.79147673726384
+    },
+    "finishCoords": {
+      "lat": 10.985553099850089,
+      "long": -74.79952252950486
+    }
+  },
+  {
+    "vehicleId": "T1196",
+    "status": "pendiente",
+    "order": 3,
+    "weight": 5,
+    "startCoords": {
+      "lat": 11.01797409203035,
+      "long": -74.80342977538167
+    },
+    "finishCoords": {
+      "lat": 11.016141333897394,
+      "long": -74.78597051884645
+    }
+  },
+  {
+    "vehicleId": "T1081",
+    "status": "pendiente",
+    "order": 2,
+    "weight": 2,
+    "startCoords": {
+      "lat": 10.98949636423648,
+      "long": -74.80627957959702
+    },
+    "finishCoords": {
+      "lat": 11.021864812554819,
+      "long": -74.82383996031751
+    }
+  }
+]
