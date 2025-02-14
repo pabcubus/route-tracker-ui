@@ -8,8 +8,19 @@ import { Wrapper } from "@googlemaps/react-wrapper";
 import VehicleMap from "../../components/VehicleMap";
 
 const Vehicles = () => {
-  const { vehicles } = useVehicles();
+  const { setVehicles, vehicles } = useVehicles();
   const [selectedVehicle, setSelectedVehicle] = useState(null);
+
+  const updateVehicle = (vehicle) => {
+    const updatedVehicles = vehicles.map((v) => {
+      if (v.id === vehicle.id) {
+        return vehicle;
+      }
+      return v;
+    });
+
+    setVehicles(updatedVehicles);
+  }
 
   return (
     <section className="vehicles content__panel">
@@ -41,7 +52,7 @@ const Vehicles = () => {
                   <td>{vehicle.status}</td>
                   <td className="table-wrapper__table__actions">
                     {vehicle.status === "disponible" && (
-                      <Button variant="primary" size="sm" className="table-wrapper__table__actions-action">
+                      <Button onClick={() => updateVehicle({...vehicle, status: 'reparto'})} variant="primary" size="sm" className="table-wrapper__table__actions-action">
                         <FontAwesomeIcon icon={faPersonRunning} />
                       </Button>
                     )}

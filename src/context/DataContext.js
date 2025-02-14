@@ -23,8 +23,6 @@ const fetchOrders = async (finishAddress, vehicles, vehiclesOrders) => {
     vehiclesOrders
   };
 
-  console.log('order: ', JSON.stringify(payload));
-
   const res = await axios
     .post(
       'https://tracking-api-6yoqe.ondigitalocean.app/request/2',
@@ -65,7 +63,11 @@ export const DataProvider = ({ children }) => {
       );
 
       const delAddress = addressesJSON[index];
-      const res = await fetchOrders(delAddress, vehicles, orders)
+      const res = await fetchOrders(
+        delAddress,
+        vehicles.filter((vehicle) => vehicle.status === "disponible"),
+        orders
+      )
       const { choosenVehicle, order } = res;
     
 
