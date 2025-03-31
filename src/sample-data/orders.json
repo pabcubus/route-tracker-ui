@@ -1,23 +1,9 @@
 [
   {
-    "finishAddress": "Cra. 64e #86-2",
-    "vehicleId": "T1271",
-    "status": "pendiente",
-    "order": 1,
-    "weight": 2,
-    "startCoords": {
-      "lat": 10.97794269693914,
-      "long": -74.79147673726384
-    },
-    "finishCoords": {
-      "lat": 10.985553099850089,
-      "long": -74.79952252950486
-    }
-  },
-  {
+    "id": "1",
     "finishAddress": "Cra. 66 #80-193",
     "vehicleId": "T1271",
-    "status": "pendiente",
+    "status": "reparto",
     "order": 3,
     "weight": 5,
     "startCoords": {
@@ -30,9 +16,10 @@
     }
   },
   {
+    "id": "2",
     "finishAddress": "C.C Boulevard Cra 54 # 72-147",
     "vehicleId": "T1447",
-    "status": "pendiente",
+    "status": "reparto",
     "order": 2,
     "weight": 2,
     "startCoords": {

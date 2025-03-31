@@ -12,12 +12,16 @@ const DataContext = createContext({
   setOrders: () => {}
 });
 
+const getRandomInt = (max) => {
+  return Math.floor(Math.random() * max) + 1;
+}
+
 const fetchOrders = async (finishAddress, vehicles, vehiclesOrders) => {
   const payload = {
     order: {
       startAddress: "Cra. 55 #99 - 51, Riomar, Barranquilla, Atlántico",
       finishAddress,
-      weight: 2
+      weight: getRandomInt(5)
     },
     vehicles,
     vehiclesOrders
@@ -52,29 +56,28 @@ export const DataProvider = ({ children }) => {
         return;
       }
 
-      setVehicles(
-        (prev) => prev.map(
+      const tempVehicles = 
+        vehicles.map(
           (vehicle) => ({
             ...vehicle,
-            requestsActive: orders.filter((order) => order.vehicleId === vehicle.id).length || 0,
+            requestsActive: orders.filter((order) => order.vehicleId === vehicle.id && order.status === "reparto").length || 0,
             requestsTotal: orders.filter((order) => order.vehicleId === vehicle.id).length || 0,
           })
-        )
-      );
+        );
 
       const delAddress = addressesJSON[index];
       const res = await fetchOrders(
         delAddress,
-        vehicles.filter((vehicle) => vehicle.status === "disponible"),
+        tempVehicles.filter((vehicle) => vehicle.status !== "offline"),
         orders
       )
       const { choosenVehicle, order } = res;
-    
 
       const newOrder = {
+        id: order.id,
         order: orders.length + 1,
         weight: order.weight,
-        status: "pendiente",
+        status: order.status,
         startAddress: order.startAddress,
         finishAddress: order.finishAddress,
         startCoords: order.startResolvedCoords,
@@ -82,9 +85,10 @@ export const DataProvider = ({ children }) => {
         vehicleId: choosenVehicle.id
       }
 
-      setOrders((prev) => {
-        return [...prev, newOrder];
-      });
+      const tempOrders = [...orders, newOrder];
+
+      setOrders(() => tempOrders);
+      setVehicles(() => tempVehicles);
 
       setIndex((index) => index + 1);
     }, 3000);

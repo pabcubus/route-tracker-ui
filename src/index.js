@@ -14,6 +14,8 @@ import {
 import { DataProvider } from './context/DataContext';
 import Home from './pages/home/Home';
 
+console.log(process.env);
+
 const router = createBrowserRouter([
   {
     path: "/", 

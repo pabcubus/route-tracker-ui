@@ -8,14 +8,14 @@ const Layout = () => {
     <section className="layout">
       <nav className="layout__nav">
         <NavLink className="layout__nav--link" to="/vehicles">
-          <FontAwesomeIcon icon={faPersonBiking} size="xl" />
+          <FontAwesomeIcon icon={faPersonBiking} size="2xl" />
         </NavLink>
         <NavLink className="layout__nav--link" to="/deliveries">
-          <FontAwesomeIcon icon={faBoxOpen} size="xl" />
+          <FontAwesomeIcon icon={faBoxOpen} size="2xl" />
         </NavLink>
         <div className="layout__nav--separator"></div>
         <NavLink className="layout__nav--link" to="/deliveries">
-          <FontAwesomeIcon icon={faGear} size="xl" />
+          <FontAwesomeIcon icon={faGear} size="2xl" />
         </NavLink>
       </nav>
       <section className="layout__main">

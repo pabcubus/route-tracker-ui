@@ -3,7 +3,7 @@ import { Button, Table } from "react-bootstrap";
 import { useVehicles } from "../../context/DataContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExclamation, faLocationDot, faPersonRunning } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faPerson, faPersonRunning, faToggleOff, faToggleOn } from "@fortawesome/free-solid-svg-icons";
 import { Wrapper } from "@googlemaps/react-wrapper";
 import VehicleMap from "../../components/VehicleMap";
 
@@ -51,19 +51,49 @@ const Vehicles = () => {
                   <td>{vehicle.requestsTotal}</td>
                   <td>{vehicle.status}</td>
                   <td className="table-wrapper__table__actions">
-                    {vehicle.status === "disponible" && (
-                      <Button onClick={() => updateVehicle({...vehicle, status: 'reparto'})} variant="primary" size="sm" className="table-wrapper__table__actions-action">
-                        <FontAwesomeIcon icon={faPersonRunning} />
+                    {!['reparto', 'offline'].includes(vehicle.status) && (
+                      <Button
+                        onClick={() => updateVehicle({...vehicle, status: 'reparto'})}
+                        variant="primary"
+                        size="md"
+                        className="table-wrapper__table__actions-action">
+                        <FontAwesomeIcon icon={faPersonRunning} size="md" />
                       </Button>
                     )}
-                    {vehicle.status === "reparto" && (
-                      <Button variant="primary" size="sm" className="table-wrapper__table__actions-action">
-                        <FontAwesomeIcon icon={faExclamation} />
+                    {!['disponible', 'offline'].includes(vehicle.status) && (
+                      <Button
+                        onClick={() => updateVehicle({...vehicle, status: 'disponible'})}
+                        variant="primary"
+                        size="md"
+                        className="table-wrapper__table__actions-action">
+                        <FontAwesomeIcon icon={faPerson} size="md" />
                       </Button>
                     )}
-                    <Button variant="success" size="sm" className="table-wrapper__table__actions-action" onClick={() => setSelectedVehicle(vehicle)}>
-                      <FontAwesomeIcon icon={faLocationDot} />
+                    <Button
+                      onClick={() => setSelectedVehicle(vehicle)}
+                      variant="success"
+                      className="table-wrapper__table__actions-action"
+                      size="md">
+                      <FontAwesomeIcon icon={faLocationDot} size="md" />
                     </Button>
+                    {!['offline'].includes(vehicle.status) && (
+                      <Button
+                        onClick={() => updateVehicle({...vehicle, status: 'offline'})}
+                        variant="primary"
+                        size="md"
+                        className="table-wrapper__table__actions-action">
+                        <FontAwesomeIcon icon={faToggleOn} size="md" />
+                      </Button>
+                    )}
+                    {['offline'].includes(vehicle.status) && (
+                      <Button
+                        onClick={() => updateVehicle({...vehicle, status: 'disponible'})}
+                        variant="danger"
+                        size="md"
+                        className="table-wrapper__table__actions-action">
+                        <FontAwesomeIcon icon={faToggleOff} size="md" />
+                      </Button>
+                    )}
                   </td>
                 </tr>
               ))}

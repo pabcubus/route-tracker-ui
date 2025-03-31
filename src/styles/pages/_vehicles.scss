@@ -19,6 +19,16 @@
       border-radius: 10px;
     }
   }
+
+  &__table {
+    &__status {
+      text-transform: capitalize;
+
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
 .table-wrapper {
@@ -34,7 +44,8 @@
       gap: 4px;
 
       &-action {
-        width: 30px;
+        width: 40px;
+        height: 40px;
       }
     }
   }
