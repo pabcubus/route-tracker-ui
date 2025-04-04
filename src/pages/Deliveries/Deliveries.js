@@ -64,7 +64,6 @@ const Deliveries = () => {
               <th>Destino</th>
               <th>Peso</th>
               <th>Estado</th>
-              <th>Estado 2</th>
               <th>Vehiculo</th>
               <th></th>
             </tr>
@@ -75,7 +74,6 @@ const Deliveries = () => {
                 <td>{order.weight}</td>
                 <td>{order.finishAddress}</td>
                 <td>{order.weight}</td>
-                <td>{order.status}</td>
                 <td>
                   {drawStatus(order)}
                 </td>
